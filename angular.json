@@ -19,6 +19,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "allowedCommonJsDependencies": ["google-libphonenumber"],
+
             "assets": [
               {
                 "glob": "**/*",
@@ -136,7 +138,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "8897d81e-615f-45ff-bba9-771b4eb60d38"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

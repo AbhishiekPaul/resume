@@ -1,0 +1,255 @@
+.resume-container{
+  padding-inline-start: var(--ion-grid-padding-xs, var(--ion-grid-padding, 15px));
+    padding-inline-end: var(--ion-grid-padding-xs, var(--ion-grid-padding, 15px));
+}
+.text-hello{
+  color: #053750;
+      font-family: Josefin Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+}
+.resume-text{color: #FFF;
+  font-family: "Josefin Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;}
+.custom-item {  
+  padding: 10px;
+  background: linear-gradient(107deg, #204489 -13.07%, #DD2A7E 107.35%);
+ 
+  color: white; /* Text color should contrast with the background */
+}
+.custom-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+
+  background-color: #333;
+
+  color: #fff;
+  margin: 0px;
+}
+
+.text-container {
+  margin-bottom: 10px;
+}
+.r-img{    margin-top: 76px;
+transform: rotate(-7.239deg);
+height: 80px;
+width: 60px;}
+.ion-text1 {
+  color: #FFF;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 330px;
+  display: block;
+  white-space: pre-line;
+  word-wrap: break-word;
+
+}
+
+.italic-text {
+  color: #FFF;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.image-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  left: 16px;
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.resume-button{
+--border-radius: 8px;
+    --background: #F28713;
+    display: math;
+}
+
+ion-text {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.icon-row {
+  display: flex;
+  width: 430px;
+  height: 70px;
+  padding: 13px 40px 0px 12px;
+  align-items: flex-start;
+  gap: 10px;
+  background: #053750;
+  margin-left: -19px;
+}
+
+.icon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon-image {
+  width: 16px;
+  height: 14px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.icon-text {
+  color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.resume-container {
+  .greeting-text {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #053750;
+  }
+
+  .resume-title {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #053750;
+  }
+
+  .resume-description {
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .italic-description {
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  .text-section {
+    margin-bottom: 5px;
+  }
+
+  .resume-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .create-resume-button {
+    background-color: #053750;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .icon-navigation {
+    margin-top: 20px;
+    background-color: #053750;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .icon-item {
+    text-align: center;
+  }
+
+  .icon-image {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+
+  .icon-label {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFF;
+  }
+
+  .card-item {
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+
+  .active-indicator {
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    background: #FFF;
+    left: 60px;
+    bottom: 73px;
+  }
+
+  .inline-start {
+    float: inline-start;
+  }
+
+  .inline-end {
+    float: inline-end;
+  }
+
+  .button-content {
+    display: flex;
+  }
+
+  .button-icon {
+    height: 20px;
+    width: 20px;
+    margin: -2px 5px;
+  }
+
+  .centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .margin-top-10 {
+    margin-top: 10px;
+  }
+
+  .margin-bottom-5 {
+    margin-bottom: 5px;
+  }
+
+  .centered-image {
+    margin: 0px 170px;
+  }
+  
+  .bordered-image {
+    border-left: 5px solid #053750;
+  }
+}

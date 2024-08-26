@@ -1,0 +1,86 @@
+
+<ion-grid id="#resume-Container">
+  <ion-row>
+    <ion-col>
+      <ion-item class="custom-button" >
+        <ion-img src="assets/icon/Group.png" class="button-icon"></ion-img>
+        <ion-text class="button-text">
+          English
+        </ion-text>
+        <ion-icon name="caret-down-outline" class="button-icon-down"></ion-icon>
+      </ion-item>
+      
+    </ion-col>
+  </ion-row>
+  <div class="career-div">
+    <ion-text class="domain-text">
+      Career Level and Domain
+    </ion-text>
+  </div>
+  <div class="career-div">
+    <ion-text class="career-text">
+      What is your career level?
+    </ion-text>
+  </div>
+  <div class="career-div">
+    <ion-checkbox class="circular-checkbox" label-placement="end">Student</ion-checkbox>
+    <ion-checkbox class="circular-checkbox" label-placement="end">Internship</ion-checkbox>
+    <ion-checkbox class="circular-checkbox" label-placement="end">Entry Level (0-1 years)</ion-checkbox>
+    <ion-checkbox class="circular-checkbox" label-placement="end">Experienced</ion-checkbox>
+  </div>
+  
+  <div class="preferred-domain">
+    <ion-text class="career-text">Choose your preferred domain</ion-text>
+  </div>
+ 
+    <ion-row>
+      <ion-col>
+
+      
+      <ion-input class="domain-input">
+
+      </ion-input>
+    </ion-col>
+    
+    <ion-text  class="domain-hint">
+      Select min 1 and max 2 domains
+    </ion-text>
+
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-item class="custom-button1">
+         
+          <ion-text class="domain-design  ">
+            Design
+          </ion-text>
+          <ion-icon name="close-circle" class=" "></ion-icon>
+                        </ion-item>
+        
+      </ion-col>
+    </ion-row>  
+    
+    <ion-content class="job-content-container">
+      <div class="buttons-container">
+            <ion-button class="career-item" *ngFor="let names of careerPurpose">
+              <ion-text class="career-text">{{ names.name }}</ion-text>
+            </ion-button>
+      </div>
+    </ion-content>
+    <ion-row size="12">
+      <ion-col size=12>
+        <ion-button class="Get-Started-text">
+          <ion-text style="color: #FFF;
+          font-family: Poppins;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          padding: 4px;
+          line-height: normal;">Get Started</ion-text>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    
+</ion-grid>
