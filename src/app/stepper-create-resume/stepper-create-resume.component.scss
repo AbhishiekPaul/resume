@@ -1,0 +1,154 @@
+
+.ion-padding {
+  height: 14vh;
+}
+
+// . {
+//   width: 100%;
+//     background-color: #053750;
+//     border-radius: 8px;
+//     overflow: hidden;
+//     height: 10px;
+//     margin-bottom: 16px;
+// }
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+  }
+}
+.custom-stepper {
+  display: flex;
+  flex-direction: row; // Arrange steps horizontally
+  overflow-x: auto; // Allow horizontal scrolling
+
+  ion-step {
+    height: 45px; // Set the height of each step
+    border-radius: 10px; // Rounded corners
+    display: flex;
+    align-items: center; // Center content vertically
+    justify-content: center; // Center content horizontally
+
+    .step-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stepper-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; // Align content to start
+      width: 26vw;
+      height: 100%;
+      --border-radius: 24px;
+      --border: 0.5px solid #71bdbd;
+      --background: #E3F2F2;;
+      &:hover {
+        --background-color: 
+        #71BDBD;
+      }
+  
+      &.stepper-button.active {
+        --background: 
+        #71BDBD;
+        --color: #FFF;
+        // border: 2px solid #003f7f;
+      }
+    }
+      ion-icon {
+        font-size: 14px;
+        color: black;
+        background: white;
+        padding: 4px;
+        border-radius: 10px;
+        margin-right: 7px;
+    
+      }
+
+      .stepper-text {
+        font-size: 10px;
+        font-weight: 600;
+        color: #000;
+        text-transform: capitalize;
+    
+      }
+    }
+  }
+
+.icon-row {
+  display: flex;
+  width: 430px;
+  height: 70px;
+  padding: 13px 40px 0px 12px;
+  align-items: flex-start;
+  gap: 10px;
+  background: #053750;
+  
+}
+.light-div{
+  width: 25px;
+height: 3px;
+border-radius: 5px;
+position: absolute;
+background: #FFF;
+left: 60px;
+bottom: 67px;
+}
+.icon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.icon-text{color: #FFF;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;}
+  .icon-image {
+    width: 16px;
+    height: 14px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+  .align-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .inline-container {
+    // margin: 37px 13px 16px 8px;
+    display: flex;
+  }
+  
+  .text-next {
+    margin-top: 0; /* Remove top margin */
+    margin-right: 12px; /* Space between text and icon */
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  .arrow-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }

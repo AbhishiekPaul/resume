@@ -191,6 +191,12 @@
   line-height: normal;
  
 }
+.error-mes{
+  font-weight: 900;
+  padding: 5px 38px;
+  color: red;
+
+}
 
 .footer-text {
   color: #FFF;
@@ -255,8 +261,11 @@
 
 .error-message {
   color: red;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 4px;
+  margin-left: 24px;
+  font-weight: 700;
+  font-family: sans-serif;
 }
 .email-input-container, .password-input-container {
   --margin-start: 0;

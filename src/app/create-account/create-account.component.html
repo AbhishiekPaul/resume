@@ -19,7 +19,7 @@
             type="email"
           ></ion-input>
         </ion-item>
-        <div *ngIf="createAccountForm.get('email')?.touched && createAccountForm.get('email')?.invalid">
+        <div *ngIf="createAccountForm.get('email')?.touched && createAccountForm.get('email')?.invalid" class="error-message">
           <small *ngIf="createAccountForm.get('email')?.errors?.['required']">Email is required.</small>
           <small *ngIf="createAccountForm.get('email')?.errors?.['email']">Invalid email format.</small>
         </div>
@@ -36,7 +36,7 @@
             type="password"
           ></ion-input>
         </ion-item>
-        <div *ngIf="createAccountForm.get('password')?.touched && createAccountForm.get('password')?.invalid">
+        <div *ngIf="createAccountForm.get('password')?.touched && createAccountForm.get('password')?.invalid" class="error-message">
           <small *ngIf="createAccountForm.get('password')?.errors?.['required']">Password is required.</small>
           <small *ngIf="createAccountForm.get('password')?.errors?.['minlength']">
             Password must be at least 6 characters long.
@@ -55,7 +55,7 @@
             type="password"
           ></ion-input>
         </ion-item>
-        <div *ngIf="createAccountForm.get('confirmPassword')?.touched && createAccountForm.get('confirmPassword')?.invalid">
+        <div *ngIf="createAccountForm.get('confirmPassword')?.touched && createAccountForm.get('confirmPassword')?.invalid" class="error-message">
           <small *ngIf="createAccountForm.get('confirmPassword')?.errors?.['required']">Confirming your password is required.</small>
           <small *ngIf="createAccountForm.get('confirmPassword')?.errors?.['passwordMismatch']">
             Passwords do not match.
@@ -78,7 +78,7 @@
       <ion-text class="login-prompt-text">Already have an account?</ion-text>
     </ion-col>
     <ion-col size="4">
-      <ion-text class="login-link-text"   >Login</ion-text>
+      <ion-text class="login-link-text"  (click)="showPhonecomponent()" >Login</ion-text>
     </ion-col>
   </ion-row>
 

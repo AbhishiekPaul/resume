@@ -1,0 +1,183 @@
+
+    <ion-grid>
+  <ion-row>
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    <ion-col>
+      <ion-text style="color: #053750;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;">Create Resume</ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-content class="ion-padding">
+    <!-- Display the progress percentage -->
+    <ion-text class="progress-text">{{ progress }}%
+      <span style="color: #A6A6A6; font-family: Poppins; font-size: 12px; font-weight: 500;">
+        Profile Completed
+      </span>
+    </ion-text>
+  
+    <div class="progress-container">
+      <div class="progress-fill" [ngStyle]="{ width: progress + '%' }"></div>
+    </div>
+    <!-- Stepper with buttons for each step -->
+    <!-- <ion-stepper [(ngModel)]="step" [steps]="steps"  class="custom-stepper">
+      <ion-step *ngFor="let s of steps ;let i = index">
+        <div class="step-content">
+          <ion-button expand="block" (click)="increaseProgress(s,i)"  [ngClass]="{'active-button': activeStepIndex === i}" class="stepper-button">
+            <ion-icon [name]="s.icon"></ion-icon>
+            <ion-text class="stepper-text">{{ s.title }}</ion-text>
+          </ion-button>
+        </div>
+      </ion-step>
+    </ion-stepper>
+  </ion-content> -->
+  <ion-stepper  class="custom-stepper">
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"   class="stepper-button" [class.active]="activeStepIndex === 0">
+          <ion-icon name="person"></ion-icon>
+          <ion-text class="stepper-text">About Me</ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"  class="stepper-button" (click)="showObjectiveComponent()"   [class.active]="activeStepIndex === 1">
+          <!-- <ion-icon [name]="icon"></ion-icon> -->
+           <img src="assets/icon/arrow thro.png" alt="">
+          <ion-text class="stepper-text">Objective</ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"   class="stepper-button" (click)="showEducationComponent()" [class.active]="activeStepIndex === 2">
+          <img src="assets/icon/education (2).png" alt="">
+          <ion-text class="stepper-text">Educations</ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"   class="stepper-button" (click)="showSkillsComponent()" [class.active]="activeStepIndex === 3">
+          <img src="assets/icon/skills.png" alt="">
+          <ion-text class="stepper-text">Skills</ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"    class="stepper-button" (click)="showProjectComponent()" [class.active]="activeStepIndex === 4">
+          <!-- <ion-icon [name]="s.icon"></ion-icon> -->
+          <ion-text class="stepper-text">Project</ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"   class="stepper-button">
+          <!-- <ion-icon [name]="s.icon"></ion-icon> -->
+          <ion-text class="stepper-text"></ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+    <ion-step >
+      <div class="step-content">
+        <ion-button expand="block"   class="stepper-button">
+          <!-- <ion-icon [name]="s.icon"></ion-icon> -->
+          <ion-text class="stepper-text"></ion-text>
+        </ion-button>
+      </div>
+    </ion-step>
+  </ion-stepper>
+</ion-content>
+  
+  
+
+ <div *ngIf="AboutmeComponent" [class.active]="AboutmeComponent">
+  <app-aboutme></app-aboutme>
+</div>
+<div  *ngIf="objectiveComponent" [class.active]="objectiveComponent">
+  <app-objective-component>
+
+  </app-objective-component>
+</div>
+<div *ngIf="eductaionComponent" [class.active]="eductaionComponent">
+  <app-education>
+<h1>eductioon shows</h1>
+  </app-education>
+</div>
+<div *ngIf="skillsComponent">
+  <!-- <h1>jhuiyguftgvjhbkj</h1> -->
+  <app-skills>
+    <!-- <h1>okjiouhigyuftgvjhbj</h1>/ -->
+<h1>skills component</h1>
+  </app-skills>
+</div>    
+<div *ngIf="projectsComponent">
+  <app-projects>
+    <h1>projectscomponent</h1>
+  </app-projects>
+</div>
+
+
+<ion-footer class="fixed-footer">
+  <ion-toolbar>
+ <ion-row>
+  <ion-col>
+    <img src="assets/icon/plusSymbol.png" alt="" style="    width: 20px;
+    height: 20px;
+    margin: 0px 12px;">
+    <ion-text style="position: absolute;">
+    ADD
+  </ion-text>
+</ion-col>
+<ion-col class="align-right">
+  <div class="inline-container">
+    <ion-text class="text-next">NEXT</ion-text>
+    <img src="assets/icon/down arrow.png" alt="" class="arrow-icon">
+  </div>
+</ion-col>
+
+
+ </ion-row>
+ 
+<ion-row class="icon-row">
+  <div class="light-div">
+
+  </div>
+  <ion-col class="icon-col">
+    <img src="assets/icon/home-icon.png" alt="" class="icon-image">
+    <ion-text class="icon-text">
+      Home
+    </ion-text>
+  </ion-col>
+  
+  <ion-col class="icon-col">
+    <img src="assets/icon/icon-type.png" alt="" class="icon-image">
+    <ion-text class="icon-text">
+      Templates
+    </ion-text>
+  </ion-col>
+  
+  <ion-col class="icon-col">
+    <img src="assets/icon/bag-icon.png" alt="" class="icon-image ">
+    <ion-text class="icon-text"> 
+      Jobs
+    </ion-text>
+  </ion-col>
+  
+  <ion-col class="icon-col">
+    <img src="assets/icon/setting-icon.jpg" alt="" class="icon-image">
+    <ion-text class="icon-text">
+      Settings
+    </ion-text>
+  </ion-col>
+</ion-row>
+ </ion-toolbar>
+</ion-footer>
+</ion-grid>

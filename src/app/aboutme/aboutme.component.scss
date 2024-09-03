@@ -1,0 +1,23 @@
+.form-group{
+    border-radius: 8px;
+    border: 1px solid #71BDBD;
+    margin: 12px;
+    height: 42px;
+  }
+  .form-group>ion-label{
+    position: absolute;
+    top: -1px;
+    left: 40px;
+    background-color: #fff;
+    line-height: 1px;
+    color: #053750;
+    width: 30vw;
+    opacity: 11px;
+    padding-left: 12px;
+  }
+  .form-group>ion-input{
+    border:none;
+    border:0;
+    line-height:100%;
+  }
+ 

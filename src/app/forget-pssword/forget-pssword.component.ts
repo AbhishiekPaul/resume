@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forget-pssword',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgetPsswordComponent  implements OnInit {
 
-  constructor() { }
-
+  constructor(public router:Router) { }
+  forgotPassword(){
+    this.router.navigate(["Email-varification"])
+  }
   ngOnInit() {}
 
 }

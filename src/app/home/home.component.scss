@@ -33,9 +33,11 @@
   color: #fff;
   margin: 0px;
 }
-
+.resume-photo{
+  border-left: 5px solid #053750;
+}
 .text-container {
-  margin-bottom: 10px;
+  margin: 10px 0px;
 }
 .r-img{    margin-top: 76px;
 transform: rotate(-7.239deg);
@@ -82,11 +84,7 @@ width: 60px;}
     display: math;
 }
 
-ion-text {
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-}
+
 .icon-row {
   display: flex;
   width: 430px;
@@ -113,6 +111,64 @@ ion-text {
   object-fit: cover;
 }
 
+.resume-image{  margin-top: 76px;
+transform: rotate(-7.239deg);
+height: 80px;
+width: 60px;
+}
+.strong-resume{color: #053750;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;}
+.lets-text{color: #053750;
+font-family: Poppins;
+font-size: 13px;
+font-style: italic;
+font-weight: 500;
+line-height: normal;}
+.add-icon{
+      height: 20px;
+            margin: -2px 5px;
+            width: 20px;
+}
+.create-text{
+  color: #FFF;
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+}
+.template-text{
+  color: #053750;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.see-All-text{
+  color: #053750;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; float: inline-end;margin-top: 7px
+}
+.light-div{
+  width: 25px;
+height: 3px;
+border-radius: 5px;
+position: absolute;
+background: #FFF;
+left: 60px;
+bottom: 120px;
+}
+
+// style=""
 .icon-text {
   color: #FFF;
 text-align: center;
