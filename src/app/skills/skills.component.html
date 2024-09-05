@@ -1,11 +1,68 @@
-<!-- <ion-grid>
+<ion-grid style="    margin: 10px 12px;">
+  <ion-text style="color: #053750;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;">
+    Enter Skills
+  </ion-text>
   <ion-row>
-    <ion-text>
-      Enter Skills
-    </ion-text>
-    <ion-col style="height: 40px;border-radius: 10px;
-background: rgba(113, 189, 189, 0.20);">
-      
+   
+    <ion-col style="border-radius: 10px;
+background: rgba(113, 189, 189, 0.20);height: 45px;
+margin: 10px 0px;" >
+<ion-icon name="add" style="background: #FFF;
+padding: 2px;
+float: inline-end;
+color: #71BDBD;margin: 7px;">
+</ion-icon>
+
     </ion-col>
   </ion-row>
-</ion-grid> -->
+<ion-row style="border-radius: 10px;
+border: 0.5px solid #A6A6A6;margin: 8px 0px;height: 120px;
+">
+  <ion-col size="5">
+    <ion-button class="skillsButton">
+      <ion-text >
+        Wireframing
+      </ion-text>
+      <ion-icon name="close-outline"></ion-icon>
+
+    </ion-button>
+  </ion-col>
+  <ion-col size="5">
+    <ion-button class="skillsButton">
+      <ion-text >
+        UX Research
+      </ion-text>
+      <ion-icon name="close-outline"></ion-icon>
+
+    </ion-button>
+  </ion-col>
+</ion-row>
+<div style="margin: 40px 0px 15px 10px;">
+<ion-text style="color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;">
+  Suggested Skills
+</ion-text>
+</div>
+<ion-row>
+  <ion-col *ngFor="let buttonText of buttonTexts" size="5">
+    <div>
+    <ion-button class="customButton" fill="outline">
+      <ion-text>{{ buttonText }}</ion-text>
+    </ion-button>
+  </div>
+  </ion-col>
+</ion-row>
+
+
+</ion-grid>

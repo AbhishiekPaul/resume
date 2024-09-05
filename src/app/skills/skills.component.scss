@@ -1,0 +1,68 @@
+:host {
+    .skillsButton {
+        display: flex;
+        width: 141.513px;
+        height: 32px;
+        padding: 8px 15px;
+        justify-content: center;
+        align-items: center;
+        --padding-top: 0px;
+        --padding-bottom: 0px;
+        --padding-start: 0em;
+        --padding-end: 0em;
+        border-radius: 0px;
+        border: 1px solid #71BDBD;
+        background: #E3F2F2;
+        gap: 4px;
+        border-radius: 24px;
+    }
+  
+    .skillsButton ion-icon {
+      background: #A6A6A6;
+      border-radius: 24px;
+      width: 15px;
+      height: 15px;
+      margin-left: 95px;
+    
+    }
+  
+    .skillsButton ion-text {
+      color: #000;
+      font-family: Poppins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      margin-right: 23px;
+      line-height: normal;
+      position: absolute;
+      text-transform: capitalize;
+    }
+  }
+.skillsButton{
+    --background: none;
+    --box-shadow: none;
+
+}  
+::ng-deep .customButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 0.5px solid #A6A6A6;
+    background: none;
+    flex-shrink: 0;
+    text-transform: capitalize;
+    --padding-start: 5px;
+    --padding-end: 2px;
+    --border-style: none width: auto;
+  }
+  
+  ::ng-deep .customButton ion-text {
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  

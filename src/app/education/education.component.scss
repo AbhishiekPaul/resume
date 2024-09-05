@@ -2,7 +2,7 @@
   border-radius: 8px;
   border: 1px solid #71BDBD;
   margin: 12px;
-  height: 42px;
+  height: 50px;
 }
 .form-group>ion-label{
   position: absolute;
@@ -20,3 +20,14 @@
   border:0;
   line-height:100%;
 }
+
+  .calendarIcon {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #053750;
+    pointer-events: none; /* Ensures the input remains clickable */
+  }
+

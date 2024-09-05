@@ -1,3 +1,93 @@
-<p>
-  experience works!
-</p>
+<ion-grid style="margin: 10px;">
+  <form action="">
+    <ion-row>
+    <ion-col size=12>
+      <ion-label style="color: #053750;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;">
+        Company Name
+      </ion-label>
+      <ion-input style="height: 45px;" class="projectTitleInput">
+
+      </ion-input>
+    </ion-col>
+    <ion-col size=12>
+      <ion-label style="color: #053750;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;">
+        Position/Designation
+      </ion-label>
+      <ion-input style="height: 45px;" class="projectTitleInput">
+
+      </ion-input>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-label
+        style="color: #053750; text-align: center; font-family: Poppins; font-size: 13px; font-weight: 400; line-height: normal;"
+      >
+        Start Date
+      </ion-label>
+      <div lines="none" class="projectTitleContainer">
+
+        <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size=6>
+
+    
+      <ion-label
+        style="color: #053750; text-align: center; font-family: Poppins; font-size: 13px; font-weight: 400; line-height: normal;"
+      >
+        End Date
+      </ion-label>
+      <div lines="none" class="projectTitleContainer">
+
+        <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+  <ion-col size=12>
+    <ion-label style="color: #053750;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;">
+      Description (Optional)
+    </ion-label>
+    <ion-input class="projectTitleInput">
+
+    </ion-input>
+  </ion-col>
+</ion-row>
+
+  
+  </form>
+  <ion-row>
+    <ion-col size="8" class="checkboxContainer">
+      <ion-checkbox class="styledCheckbox"></ion-checkbox>
+      <ion-text class="textBehind">Are you currently Working here?</ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+  <ion-col>
+    <img src="assets/icon/plusSymbol.png" alt="" style="    width: 20px;
+    height: 20px;
+    margin: 0px 12px;">
+    <ion-text style="position: absolute;">
+    ADD
+  </ion-text>
+</ion-col>
+</ion-row>
+</ion-grid>

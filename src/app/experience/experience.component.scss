@@ -1,0 +1,55 @@
+.projectTitleInput{
+    --border-radius: 10px;
+--background: rgba(113, 189, 189, 0.20);
+height: 200px;
+}
+
+.projectTitleContainer {
+    position: relative;
+    height: 40px;
+    border: 1px solid #71BDBD;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0 10px;
+    --background: rgba(113, 189, 189, 0.20);;
+    background-color:rgba(113, 189, 189, 0.20);;
+
+    .calendarIcon {
+      position: absolute;
+      right: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #053750;
+      pointer-events: none; /* Ensures the input remains clickable */
+    }
+  }
+  .checkboxContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; // Adjust size as needed
+    height: 100px;
+  }
+  
+  .styledCheckbox {
+    --background: #e3f2f2;
+    --border-color: #71bdbd;
+    --border-radius: 5px; // Optional rounded corners
+    --size: 25px; // Control the size of the checkbox
+    z-index: 2; // Ensure the checkbox appears in front
+  }
+  
+  .textBehind {
+    color: #000;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  

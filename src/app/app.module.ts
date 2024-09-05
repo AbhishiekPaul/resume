@@ -28,10 +28,13 @@ import { StepperCreateResumeComponent } from './stepper-create-resume/stepper-cr
 import { ObjectiveComponentComponent } from './objective-component/objective-component.component';
 import { EducationComponent } from './education/education.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 
 @NgModule({
-  declarations: [AppComponent,PhoneComponentComponent,ResumeLoginComponent,EmailComponentComponent,OtpComponent,EmailVerificationComponent,CreateAccountComponent,ForgetPsswordComponent ,DashboardComponent,GetStartedComponent,HomeComponent,StepperCreateResumeComponent,ObjectiveComponentComponent,EducationComponent,AboutmeComponent],
+  declarations: [AppComponent,PhoneComponentComponent,ResumeLoginComponent,EmailComponentComponent,OtpComponent,EmailVerificationComponent,CreateAccountComponent,ForgetPsswordComponent ,DashboardComponent,GetStartedComponent,HomeComponent,StepperCreateResumeComponent,SkillsComponent,ObjectiveComponentComponent,EducationComponent,AboutmeComponent,ProjectsComponent,ExperienceComponent],
   imports: [BrowserModule,IonicModule.forRoot(), AppRoutingModule,ReactiveFormsModule,CommonModule,FormsModule, HttpClientModule,SocialLoginModule,GoogleSigninButtonModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {

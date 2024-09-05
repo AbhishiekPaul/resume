@@ -11,6 +11,7 @@ export class ForgetPsswordComponent  implements OnInit {
   constructor(public router:Router) { }
   forgotPassword(){
     this.router.navigate(["Email-varification"])
+    
   }
   ngOnInit() {}
 
