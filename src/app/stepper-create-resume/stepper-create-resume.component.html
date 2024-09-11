@@ -6,8 +6,8 @@
       <ion-text class="Resume-text">Create Resume</ion-text>
     </ion-col>
   </ion-row>
-
-  <ion-content class="ion-padding">
+  <ion-row>
+<ion-col size="2">
     <ion-text class="progress-text">{{ progress }}%
       <span class="profile-completed">
         Profile Completed
@@ -16,74 +16,29 @@
     <div class="progress-container">
       <div class="progress-fill" [ngStyle]="{ width: progress + '%' }"></div>
     </div>
-    <ion-stepper class="custom-stepper">
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showAboutme()" [class.active]="activeStepIndex === 0" class="stepper-button">
-            <!-- <ion-icon name="person" class="stepper-icon"></ion-icon> -->
-            <ion-text class="stepper-text">About Me</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showObjective()" [class.active]="activeStepIndex === 1" class="stepper-button">
-            <!-- <img src="assets/icon/arrow-thro.png" alt="" class="stepper-icon"> -->
-            <!-- <ion-icon name="person" class="stepper-icon"></ion-icon> -->
-            <ion-text class="stepper-text">Objective</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showEducation()" [class.active]="activeStepIndex === 2" class="stepper-button">
-            <img src="assets/icon/education.png" alt="" class="stepper-icon">
-            <ion-text class="stepper-text">Education</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showSkills()" [class.active]="activeStepIndex === 3" class="stepper-button">
-            <img src="assets/icon/skills.png" alt="" class="stepper-icon">
-            <ion-text class="stepper-text">Skills</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showProjects()" [class.active]="activeStepIndex === 4" class="stepper-button">
-            <ion-text class="stepper-text">Project</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showExperience()" [class.active]="activeStepIndex === 5" class="stepper-button">
-            <ion-text class="stepper-text">Experience</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showMarks()" [class.active]="activeStepIndex === 6" class="stepper-button">
-            <ion-text class="stepper-text">Marks</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-      <ion-step>
-        <div class="step-content">
-          <ion-button expand="block" (click)="showSocialMedia()" [class.active]="activeStepIndex === 7" class="stepper-button">
-            <ion-text class="stepper-text">Social Media</ion-text>
-          </ion-button>
-        </div>
-      </ion-step>
-    </ion-stepper>
-  
-</ion-content>
-  
-  
+    <ion-content class="ion-padding ">
+      <ion-stepper class="custom-stepper">
+        <ion-step *ngFor="let step of steps; let i = index">
+          <div class="step-content">
+            <ion-button
+              expand="block"
+              (click)="toggleStep(step)"
+              [class.active]="activeStepIndex === i"
+              class="stepper-button"
+            >
+              <img
+              [src]="step.isActive ? step.activeIcon : step.defaultIcon"
+            
+              class="stepper-icon"
+            />
+            </ion-button>
+          </div>
+        </ion-step>
+      </ion-stepper>
+    </ion-content>
 
+</ion-col>
+<ion-col>
  <div *ngIf="componentsVisibility['Aboutme']"  >
   <app-aboutme></app-aboutme>
 </div>
@@ -205,7 +160,8 @@ border: 0.5px solid #A6A6A6">
     </div>
 </ion-row>
   </div>
-
+</ion-col>
+</ion-row>
 
 <ion-footer class="fixed-footer">
   <ion-toolbar>

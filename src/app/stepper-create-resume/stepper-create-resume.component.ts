@@ -9,30 +9,121 @@
   export class StepperCreateResumeComponent  implements OnInit {
     progress: number = 0;
     activeStepIndex: number = 0;
-    maxSteps: number = 5; // Total number of steps
-    stepIncrement: number = 100 / this.maxSteps; // Percentage increment per step
+    stepIncrement: number = 10;
+    rangeValue = 0;
   
-    // Object to manage component visibility
+    // Define steps with corresponding component names
+    steps = [
+      {
+        name: 'Aboutme',
+        defaultIcon: ' assets/icon/person with ox (1).png',
+        activeIcon: 'assets/icon/person with ox (2).png ',
+        isActive: false,
+      },
+      {
+        name: 'objective',
+        activeIcon: ' assets/icon/arrow-box1 (2).png',
+        defaultIcon: 'assets/icon/arrow-box1 (1).png ',
+        
+        isActive: false,
+      },
+      {
+        name: 'education',
+        defaultIcon: ' assets/icon/eductaion-box.png',
+        activeIcon: 'assets/icon/eudcation-box1.png',
+        isActive: false,
+      }, {
+        name: 'skills',
+        defaultIcon: 'assets/icon/skills-box.png',
+        activeIcon: 'assets/icon/skills=box1.png',
+        isActive: false,
+      },
+      {
+        name: 'projects',
+        defaultIcon: ' assets/icon/certification-box2.png',
+        activeIcon: 'assets/icon/projects.png',
+        isActive: false,
+      },
+      {
+        name: 'experience',
+        defaultIcon: 'assets/icon/bag-box.png',
+        activeIcon: 'assets/icon/bag-box1.png',
+        isActive: false,
+      },
+      {
+        name: 'Certifications',
+        defaultIcon: 'assets/icon/cetification-box.png',
+        activeIcon: 'assets/icon/certifications.png',
+        isActive: false,
+      },
+      {
+        name: 'Languages',
+        defaultIcon: ' assets/icon/earth-symbol.png',
+        activeIcon: 'assets/icon/earth-symbol1.png',
+        isActive: false,
+      },
+      {
+        name: 'Social',
+        defaultIcon: ' assets/icon/inrests-box.png ',
+        activeIcon: 'assets/icon/intrest-box-1.png',
+     
+        isActive: false,
+      },
+      {
+        name: 'Interests',
+        defaultIcon: 'assets/icon/languages.png',
+        activeIcon: 'assets/icon/languages2.png',
+        isActive: false,
+      },  
+      
+    ];
+    buttonTexts: any = [{name1:'Music',img:"assets/icon/Vector (7).png"}, {name1:'Painting',img:"assets/icon/Group (2).png"},{name1: 'Travelling',img:"assets/icon/flight plane.png"},{ name1:'User Experience',img:"assets/icon/Vector (8).png"},{name1:'User Research',img:"assets/icon/Vector (8).png"}];
+  
+    // Visibility state object for components
     componentsVisibility: { [key: string]: boolean } = {
-      Aboutme: true,
+      Aboutme: false,
       objective: false,
       education: false,
       skills: false,
       projects: false,
       experience: false,
-      marks: false,
-      socialMedia: false,
+      Certifications: false,
+      Languages : false,
+      Social:false,
+      Interests:false
     };
-  
-    rangeValue = 0; // Initial value of the range slider
   
     constructor() {}
   
     ngOnInit(): void {
+      this.showComponent('Aboutme'); // Display the first component initially
+    }
+  
+    // Method to toggle the active step and display the corresponding component
+    toggleStep(step: any) {
+      // Set all steps to inactive
+      this.steps.forEach((s) => (s.isActive = false));
+      // Activate the clicked step
+      step.isActive = true;
+      this.activeStepIndex = this.steps.indexOf(step);
+      // Show the corresponding component
+      this.showComponent(step.name);
       this.updateProgress();
     }
   
-    // Update progress based on the active step index
+    // Show the specified component and hide others
+    showComponent(componentName: string) {
+      // Reset visibility for all components
+      for (let key in this.componentsVisibility) {
+        this.componentsVisibility[key] = false;
+      }
+      // Show the selected component
+      if (this.componentsVisibility.hasOwnProperty(componentName)) {
+        this.componentsVisibility[componentName] = true;
+      }
+    }
+  
+    // Updates the progress based on the active step
     updateProgress() {
       this.progress = (this.activeStepIndex + 1) * this.stepIncrement;
       if (this.progress > 100) {
@@ -40,33 +131,9 @@
       }
     }
   
-    // Method to show a specific component based on its name
-    showComponent(componentName: string) {
-      // Reset all components' visibility
-      for (let key in this.componentsVisibility) {
-        this.componentsVisibility[key] = false;
-      }
-      // Set the selected component to visible
-      this.componentsVisibility[componentName] = true;
-      // Update the active step index based on the component name
-      this.activeStepIndex = Object.keys(this.componentsVisibility).indexOf(componentName);
-      this.updateProgress();
-    }
-  
-    // Specific methods to show each component
-    showAboutme() { this.showComponent('Aboutme'); }
-    showObjective() { this.showComponent('objective'); }
-    showEducation() { this.showComponent('education'); }
-    showSkills() { this.showComponent('skills'); }
-    showProjects() { this.showComponent('projects'); }
-    showExperience() { this.showComponent('experience'); }
-    showMarks() { this.showComponent('marks'); }
-    showSocialMedia() { this.showComponent('socialMedia'); }
-  
-    // Method to update the display value on range slider change
-    updateDisplay(event: any): void {
-      const sliderValue = event.detail.value;
-      // Multiply the slider value by 20 to get the desired increment display
-      this.rangeValue = sliderValue * 20;
+    // Update range display value
+    updateDisplay(event: any) {
+      this.rangeValue = event.detail.value;
+      console.log('Range changed:', this.rangeValue);
     }
   }
