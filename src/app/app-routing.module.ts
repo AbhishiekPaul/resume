@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
-import { StepperCreateResumeComponent } from './stepper-create-resume/stepper-create-resume.component';
+// import { StepperCreateResumeComponent } from './stepper-create-resume/stepper-create-resume.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ObjectiveComponentComponent } from './objective-component/objective-component.component';
   const routes: Routes = [

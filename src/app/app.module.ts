@@ -24,7 +24,7 @@ import { SocialLoginModule, SocialAuthServiceConfig, GoogleSigninButtonModule } 
 import { FacebookLoginProvider, GoogleLoginProvider } from '@abacritt/angularx-social-login';
 
 import { Loader } from '@googlemaps/js-api-loader';
-import { StepperCreateResumeComponent } from './stepper-create-resume/stepper-create-resume.component';
+// import { StepperCreateResumeComponent } from './stepper-create-resume/stepper-create-resume.component';
 import { ObjectiveComponentComponent } from './objective-component/objective-component.component';
 import { EducationComponent } from './education/education.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
@@ -34,10 +34,11 @@ import { ExperienceComponent } from './experience/experience.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { IntrestsComponent } from './intrests/intrests.component';
+import { StepperComponentComponent } from './stepper-component/stepper-component.component';
 
 
 @NgModule({
-  declarations: [AppComponent,PhoneComponentComponent,ResumeLoginComponent,EmailComponentComponent,OtpComponent,EmailVerificationComponent,CreateAccountComponent,ForgetPsswordComponent ,DashboardComponent,GetStartedComponent,HomeComponent,StepperCreateResumeComponent,SkillsComponent,ObjectiveComponentComponent,EducationComponent,AboutmeComponent,ProjectsComponent,ExperienceComponent,CertificationsComponent,LanguagesComponent,IntrestsComponent],
+  declarations: [AppComponent,PhoneComponentComponent,ResumeLoginComponent,EmailComponentComponent,OtpComponent,EmailVerificationComponent,CreateAccountComponent,ForgetPsswordComponent ,DashboardComponent,GetStartedComponent,HomeComponent,StepperComponentComponent,SkillsComponent,ObjectiveComponentComponent,EducationComponent,AboutmeComponent,ProjectsComponent,ExperienceComponent,CertificationsComponent,LanguagesComponent,IntrestsComponent],
   imports: [BrowserModule,IonicModule.forRoot(), AppRoutingModule,ReactiveFormsModule,CommonModule,FormsModule, HttpClientModule,SocialLoginModule,GoogleSigninButtonModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {

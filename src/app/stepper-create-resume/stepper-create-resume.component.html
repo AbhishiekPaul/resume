@@ -1,3 +1,4 @@
+<!-- 
 
         <ion-grid class="resume-template">
       <ion-row>
@@ -66,6 +67,59 @@
       <app-education>
       </app-education>
     </div>
+
+    <ion-grid>
+  <ion-row>
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    <ion-col>
+      <ion-text class="Resume-text">Create Resume</ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+<ion-col size="2">
+    <ion-text class="progress-text">{{ progress }}%
+      <span class="profile-completed">
+        Profile Completed
+      </span>
+    </ion-text>  
+    <div class="progress-container">
+      <div class="progress-fill" [ngStyle]="{ width: progress + '%' }"></div>
+    </div>
+    <ion-content class="ion-padding ">
+      <ion-stepper class="custom-stepper">
+        <ion-step *ngFor="let step of steps; let i = index">
+          <div class="step-content">
+            <ion-button
+              expand="block"
+              (click)="toggleStep(step)"
+              [class.active]="activeStepIndex === i"
+              class="stepper-button"
+            >
+              <img
+              [src]="step.isActive ? step.activeIcon : step.defaultIcon"
+            
+              class="stepper-icon"
+            />
+            </ion-button>
+          </div>
+        </ion-step>
+      </ion-stepper>
+    </ion-content>
+
+</ion-col>
+<ion-col>
+ <div *ngIf="componentsVisibility['Aboutme']"  >
+  <app-aboutme></app-aboutme>
+</div>
+<div  *ngIf="componentsVisibility['objective']" >
+  <app-objective-component>
+  </app-objective-component>
+</div>
+<div *ngIf="componentsVisibility['education']" >
+  <app-education>
+  </app-education>
+</div>
+
 
 
     <div *ngIf="componentsVisibility['skills']">
@@ -192,6 +246,7 @@
           Previous
       </ion-text>
     </div>
+
     </ion-col>
     <ion-col class="align-right">
       <div class="button-container">
@@ -204,4 +259,4 @@
     </ion-toolbar>
     </ion-footer>
 
-    </ion-grid>
+    </ion-grid> -->
