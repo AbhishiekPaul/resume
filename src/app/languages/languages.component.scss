@@ -1,0 +1,121 @@
+.line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 285px;
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 0.5px solid #A6A6A6;
+    position: relative;
+  }
+  
+  .line h2 {
+    font-size: 15px;
+    position: relative;
+    bottom: 23px;
+    right: 50px;
+    text-align: center;
+  }
+  
+  .header-text {
+    background-color: white;
+    padding: 0 10px;
+    color:#A6A6A6;;
+  }
+  
+  .rating-section {
+    position: relative;
+    bottom: 20px;
+  }
+  
+  .language-col {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Consistent gap for alignment */
+  }
+  
+  .level-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    border-radius: 4px;
+    margin:4px 5px; /* Adds spacing between columns */
+    flex-shrink: 0;
+  }
+  
+  .level-col.low {
+    background: #F5F5F5;
+    color: #A6A6A6;
+  }
+  
+  .level-col.medium {
+    background: #E3F2F2;
+    color: var(--Blue, #053750)
+  }
+  
+  .level-col.high {
+    background: #F5F5F5;
+    color: #A6A6A6;
+  }
+  
+  .level-text {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    color: #053750;
+  }
+  
+  .icon-col {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-icon {
+    margin: 0px 2px 4px 5px;
+    height: 15px;
+    color: #D9D9D9;
+  }
+  
+  .required {
+    margin-left: 10px; /* Consistent margin for all labels */
+  }
+
+  .language-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 285px;
+  height: 44px;
+  margin-top: 30px;
+  border-radius: 6px;
+  border: 1px solid rgba(113, 189, 189, 0.44);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.07);
+  position: relative; /* Positioning context for the absolute child */
+}
+
+.language-line h2 {
+  font-size: 15px;
+  position: relative;
+  right: 44px;
+  bottom: 6px;
+  text-align: center;
+}
+
+.language-header-text {
+  background-color: white;
+  padding: 0 10px;
+  color: var(--Blue, #053750);
+}
+
+.plus-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px; /* Adjust margin as needed */
+  height: 24px; /* Adjust height as needed */
+}

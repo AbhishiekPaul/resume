@@ -7,29 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObjectiveComponentComponent  implements OnInit {
 
+  displayedText: string = ''; // Text to display in the top div
+  clickedParagraphId: string = ''; // ID of the clicked paragraph
+  backgroundColor: string = ' var(--Blue, #053750)';
+  showCopyText: string = ''; // ID of the paragraph to show the "Copy" text
+
   constructor() { }
 
   ngOnInit() {}
-  step: number = 0;
 
-  steps = [
-    { icon: 'person-circle', title: 'About Me', progress: 20 },
-    { icon: 'home', title: 'Objective', progress: 30 },
-    { icon: 'star', title: 'Education', progress: 50 },
-    { icon: 'settings', title: 'skills', progress: 70 },
-    { icon: 'help-circle', title: 'project', progress: 90 },
-  ];
+  // Function to update the text, background color, and show "Copy" text
+  updateDisplayedText(event: MouseEvent, paragraphId: string) {
+    const target = event.currentTarget as HTMLElement;
+    const textContent = target.querySelector('ion-text')?.innerText || '';
 
-  progress: number = 0;
+    // Update the displayed text and clicked paragraph ID
+    this.displayedText = textContent;
+    this.clickedParagraphId = paragraphId;
+    this.showCopyText = paragraphId;
 
-  onStepChange(event: any) {
-    
-    this.step = event?.detail?.value || event; 
-    console.log('Current Step:', this.step);
-  } 
-  
-  increaseProgress(value: number) {
-    this.progress = Math.min(this.progress + value, 100);
-    console.log('Increased Progress by:', value, 'New Progress:', this.progress);
+    // Hide the "Copy" text after a delay
+    setTimeout(() => {
+      this.showCopyText = '';
+    }, 200000); // Adjust delay as needed
   }
 }

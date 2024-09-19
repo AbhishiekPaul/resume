@@ -10,27 +10,22 @@ export class EducationComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {}
-  step: number = 0;
+  isSchoolOpen = true; 
+  isInterOpen=false;
+  isDegreeOpen=false;
+  isPgMTECH=false;
 
-  steps = [
-    { icon: 'person-circle', title: 'About Me', progress: 20 },
-    { icon: 'home', title: 'Objective', progress: 30 },
-    { icon: 'star', title: 'Education', progress: 50 },
-    { icon: 'settings', title: 'skills', progress: 70 },
-    { icon: 'help-circle', title: 'project', progress: 90 },
-  ];
-
-  progress: number = 0;
-
-  onStepChange(event: any) {
+  toggleEducation() {
+    this.isSchoolOpen = !this.isSchoolOpen; 
     
-    this.step = event?.detail?.value || event; 
-    console.log('Current Step:', this.step);
-  } 
-  
-  increaseProgress(value: number) {
-    this.progress = Math.min(this.progress + value, 100);
-    console.log('Increased Progress by:', value, 'New Progress:', this.progress);
   }
-
+  toggleInter(){
+      this.isInterOpen=!this.isInterOpen
+  }
+  toggleDegreee(){
+    this.isDegreeOpen=!this.isDegreeOpen
+  }
+  togglePgMtech(){
+    this.isPgMTECH=!this.isPgMTECH
+  }
 }

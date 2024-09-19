@@ -31,10 +31,13 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { CertificationsComponent } from './certifications/certifications.component';
+import { LanguagesComponent } from './languages/languages.component';
+import { IntrestsComponent } from './intrests/intrests.component';
 
 
 @NgModule({
-  declarations: [AppComponent,PhoneComponentComponent,ResumeLoginComponent,EmailComponentComponent,OtpComponent,EmailVerificationComponent,CreateAccountComponent,ForgetPsswordComponent ,DashboardComponent,GetStartedComponent,HomeComponent,StepperCreateResumeComponent,SkillsComponent,ObjectiveComponentComponent,EducationComponent,AboutmeComponent,ProjectsComponent,ExperienceComponent],
+  declarations: [AppComponent,PhoneComponentComponent,ResumeLoginComponent,EmailComponentComponent,OtpComponent,EmailVerificationComponent,CreateAccountComponent,ForgetPsswordComponent ,DashboardComponent,GetStartedComponent,HomeComponent,StepperCreateResumeComponent,SkillsComponent,ObjectiveComponentComponent,EducationComponent,AboutmeComponent,ProjectsComponent,ExperienceComponent,CertificationsComponent,LanguagesComponent,IntrestsComponent],
   imports: [BrowserModule,IonicModule.forRoot(), AppRoutingModule,ReactiveFormsModule,CommonModule,FormsModule, HttpClientModule,SocialLoginModule,GoogleSigninButtonModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {

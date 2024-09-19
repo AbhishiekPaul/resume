@@ -1,80 +1,177 @@
-<ion-row>
-  <ion-col style="align-content: center;">
-      <ion-text style="color: #000;
-      text-align: center;
-      font-family: Poppins;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;float: inline-end;">
-        Upload Photo
-      </ion-text>
-  </ion-col>
+<ion-content style="height: 70vh;">
+<ion-grid>
+
+  <ion-row>   
   <ion-col >
-    <ion-avatar style="width: 94px;
-    height: 106px;
-    flex-shrink: 0;">
+    <ion-avatar style="    width: 60px;
+    object-fit: cover;
+    height: 74px;margin: 10px 100px;">
       <img src="assets/icon/Layer 2.png" alt="" >
     </ion-avatar>
   </ion-col>
 </ion-row>
 
-<form action="">
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">First Name</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">Last Name</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">Email</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>
-  
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">Phone Number</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>  
+<form action="" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+ 
+  <ion-row >
+    <ion-col  size="12">
+      <div class="language-line">
+        <ion-text>
+          <span class="language-header-text">First Name</span>
+        </ion-text>
+        <ion-input formControlName="firstName" class="inputs-highlights"></ion-input>
+      </div>
+      <div *ngIf="profileForm.get('firstName')?.touched && profileForm.get('firstName')?.invalid" class="error">
+        <span *ngIf="profileForm.get('firstName')?.errors?.['required']">
+          First Name is required.
+        </span>
+        <span *ngIf="profileForm.get('firstName')?.errors?.['minlength']">
+          Minimum 2 characters required.
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col  size="12">
+      <div class="language-line">
+        <ion-text>
+          <span class="language-header-text">Last Name</span>
+        </ion-text>
+        <ion-input formControlName="lastName" class="inputs-highlights"></ion-input>
+      </div>
+      <div *ngIf="profileForm.get('lastName')?.touched && profileForm.get('lastName')?.invalid" class="error">
+        <span *ngIf="profileForm.get('lastName')?.errors?.['required']">
+          Last Name is required.
+        </span>
+        <span *ngIf="profileForm.get('lastName')?.errors?.['minlength']">
+          Minimum 2 characters required.
+        </span> 
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col  size="12">
+      <div class="language-line">
+        <ion-text>
+          <span class="language-header-text">Email</span>
+        </ion-text>
+        <ion-input formControlName="email"class="inputs-highlights" ></ion-input>
 
-
-
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">Location</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>
-
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">Job Title</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>
-
-<ion-row >
-  <ion-col class="form-group">
-    <ion-label class="required">Birth Date</ion-label>
-    <ion-input class="form-control">
-    </ion-input>
-  </ion-col>
-</ion-row>
-
+      </div>
+      <div *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.invalid" class="error">
+        <span *ngIf="profileForm.get('email')?.errors?.['required']">
+          Email is required.
+        </span>
+        <span *ngIf="profileForm.get('email')?.errors?.['email']">
+          Invalid email format.
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col  size="12">
+      <div class="language-line">
+        <ion-text>
+          <span class="language-header-text">Phone Number</span>
+        </ion-text>
+        <ion-input formControlName="phoneNumber" class="inputs-highlights"></ion-input>
+      </div>
+      <div *ngIf="profileForm.get('phoneNumber')?.touched && profileForm.get('phoneNumber')?.invalid" class="error">
+        <span *ngIf="profileForm.get('phoneNumber')?.errors?.['required']">
+          Phone Number is required.
+        </span>
+        <span *ngIf="profileForm.get('phoneNumber')?.errors?.['pattern']">
+          Invalid phone number format.
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col  size="12">
+      <div class="language-line">
+        <ion-text>
+          <span class="language-header-text">Location</span>
+        </ion-text>
+        <ion-input formControlName="location" class="inputs-highlights"></ion-input>
+     
+      </div>
+      <div *ngIf="profileForm.get('location')?.touched && profileForm.get('location')?.invalid" class="error">
+        <span *ngIf="profileForm.get('location')?.errors?.['required']">
+          Location is required.
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col  size="12">
+      <div class="language-line">
+        <ion-text>
+          <span class="language-header-text">Job Title</span>
+        </ion-text>
+        <ion-input formControlName="jobTitles" class="inputs-highlights"></ion-input> 
+      </div>
+      <div *ngIf="profileForm.get('jobTitles')?.touched && profileForm.get('jobTitles')?.invalid" class="error">
+        <span *ngIf="profileForm.get('jobTitles')?.errors?.['required']">
+          Job title is required.
+        </span>
+        <span *ngIf="profileForm.get('jobTitles')?.errors?.['minlength']">
+          Job title must be a minimum length.
+        </span>
+        <span *ngIf="profileForm.get('jobTitles')?.errors?.['pattern']">
+          Job title contains invalid characters.
+        </span>
+      </div>
+    </ion-col>
+    <ion-col size="12">
+      <div class="language-line" *ngIf="showInput1">
+        <ion-text  position="floating">
+          <span class="language-header-text">marital status</span>
+        </ion-text>
+        <ion-input formControlName="jobTitles" class="inputs-highlights"></ion-input> 
+      </div>
+    </ion-col>
+    <ion-col size="12">
+      <div class="language-line" *ngIf="showInput2">
+        <ion-text  position="floating">
+          <span class="language-header-text">Birth Date</span>
+        </ion-text>
+        <ion-input formControlName="jobTitles" class="inputs-highlights"></ion-input> 
+      </div>
+    </ion-col>
+    <ion-col size="12">
+      <div class="language-line" *ngIf="showInput3">
+        <ion-text  position="floating">
+          <span class="language-header-text">Citizenship</span>
+        </ion-text>
+        <ion-input formControlName="jobTitles" class="inputs-highlights"></ion-input> 
+      </div>
+    </ion-col>
+  </ion-row>
 </form>
 
+<ion-row class="about-me-row" size="12">
+  <ion-col size="6">
+    <ion-button class="aboutOutMe-Button" id="button-three" (click)="toggleSymbol(1)" [ngClass]="getButtonClass(1)">
+      <img src="assets/icon/Group 1000002124 (3).png " alt="" class="button-image" />
+      <ion-text class="aboutOutMe-text">Marital Status</ion-text>
+      <img [src]="symbolImage1" alt="" class="button-image" />
+    </ion-button>
+  </ion-col>
+  <ion-col size="6">
+    <ion-button class="aboutOutMe-Button" id="button-one"  (click)="toggleSymbol(2)" [ngClass]="getButtonClass(2)">
+      <img src="assets/icon/Group 1000002124 (1).png" alt="" class="button-image" />
+      <ion-text class="aboutOutMe-text">Birth Date</ion-text>
+      <img [src]="symbolImage2" alt="" class="button-image" />
+    </ion-button>
+  </ion-col>
+  <ion-col size="6">
+    <ion-button class="aboutOutMe-Button" id="button-one"  (click)="toggleSymbol(3)" [ngClass]="getButtonClass(3)">
+      <img src="assets/icon/Group 1000002124 (1).png" alt="" class="button-image" />
+      <ion-text class="aboutOutMe-text">Citizenship</ion-text>
+      <img [src]="symbolImage3" alt="" class="button-image" />
+    </ion-button>
+  </ion-col>
+
+</ion-row>
+</ion-grid>
+</ion-content>

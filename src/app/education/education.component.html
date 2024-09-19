@@ -1,123 +1,230 @@
-   <ion-grid>
-    
-    <ion-row class="">
-      
-      <ion-col style="height: 50px;border-radius: 8px;
-background: #71BDBD;left: 14px ;margin: 50px 0px 20px 2px;;" size="11.3">
-<img src="assets/icon/building.png" alt="" style="margin: 10px 5px 0px 19px;    width: 20px;
-color: #FFF;
-height: 14px;">
-<ion-text style="color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;">
-  SSC
-</ion-text>
-<ion-icon name="chevron-up-outline" style="float: inline-end;height: 25px;
-float: inline-end;
-width: 25px;
-color: #FFF;
-margin: 5px;
-"></ion-icon>
-      </ion-col>
-      
-   </ion-row>
-   <form action="" style="height: 20vh;">
-   <ion-row >
-    <ion-col class="form-group">
-      <ion-label class="required">School Name</ion-label>
-      <ion-input class="form-control">
-      </ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row >
-    <ion-col class="form-group">
-      <ion-label class="required">Location</ion-label>
-      <ion-input class="form-control">
-      </ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row >
-    <ion-col class="form-group">
-      <ion-label class="required">Start Date</ion-label>
-      <ion-input class="form-control">
- 
-       <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
-      </ion-input>  
-    </ion-col>
-    <ion-col class="form-group">
-      <ion-label class="required">End Date</ion-label>
-      <ion-input class="form-control">
-        <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
-      </ion-input>
 
-      
-
-    </ion-col>
-  </ion-row>
-</form>
-
-  <ion-row class="">
-      
-    <ion-col style="    height: 50px;
-    border-radius: 8px;
-    background: rgb(113, 189, 189);
-    left: 14px;
-    margin: 60px 4px 0px 0px;" size="11.3">
-<img src="assets/icon/building.png" alt="" style="margin: 10px 5px 0px 19px;    width: 20px;
-color: #FFF;
-height: 14px;">
-<ion-text style="color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;">
-Inter
-</ion-text>
-<ion-icon name="chevron-down-outline" style="float: inline-end;height: 25px;
-float: inline-end;
-width: 25px;
-color: #FFF;
-margin: 5px;
-"></ion-icon>
-    </ion-col>
-
- </ion-row>
- <ion-row class="">
-      
-  <ion-col style="    height: 50px;
-  border-radius: 8px;
-  background: rgb(113, 189, 189);
-  left: 14px;margin: 15px 0px;
-  " size="11.3">
-<img src="assets/icon/building.png" alt="" style="margin: 10px 5px 0px 19px;    width: 20px;
-color: #FFF;
-height: 14px;">
-<ion-text style="color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;">
-Degree
-</ion-text>
-<ion-icon name="chevron-down-outline" style="float: inline-end;height: 25px;
-float: inline-end;
-width: 25px;
-color: #FFF;
-margin: 5px;
-"></ion-icon>
-  </ion-col>
-
-</ion-row>
+   <ion-content style="height: 70vh;">
+    <ion-grid>
+      <!-- Education Section -->
+      <div class="education-div" >
+        <ion-row size="12">
+          <ion-col size="12" style="height: 50px; border-radius: 8px;">
+            <img src="assets/icon/Vector (3).png" alt="" style="margin: 10px 5px 0px 19px; width: 20px; height: 14px;">
+            <ion-text class="school-sylabus-text">
+              SSC/CBSC
+            </ion-text>
+            <ion-icon 
+              name="{{ isSchoolOpen ? 'chevron-up-outline' : 'chevron-down-outline' }}" 
+              class="school-icon"
+              (click)="toggleEducation()">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+        
+        <!-- Form that toggles visibility -->
+        <form *ngIf="isSchoolOpen">
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Location</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Start Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+            <ion-col class="form-group">
+              <ion-label class="required">End Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
   
-  </ion-grid>
-
+      <!-- Other Education Sections -->
+      <div class="education-div" >
+        <ion-row size="12">
+          <ion-col size="12" style="height: 50px; border-radius: 8px;">
+            <img src="assets/icon/Vector (3).png" alt="" style="margin: 10px 5px 0px 19px; width: 20px; height: 14px;">
+            <ion-text class="school-sylabus-text">
+              Inter/Diploma
+            </ion-text>
+            <ion-icon 
+              name="{{ isInterOpen ? 'chevron-up-outline' : 'chevron-down-outline' }}" 
+              class="school-icon"
+              (click)="toggleInter()">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+        
+        <!-- Form that toggles visibility -->
+        <form *ngIf="isInterOpen">
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Location</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Start Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+            <ion-col class="form-group">
+              <ion-label class="required">End Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
   
+  
+      <div class="education-div" >
+        <ion-row size="12">
+          <ion-col size="12" style="height: 50px; border-radius: 8px;">
+            <img src="assets/icon/Vector (3).png" alt="" style="margin: 10px 5px 0px 19px; width: 20px; height: 14px;">
+            <ion-text class="school-sylabus-text">
+              Degree/B.Tech
+            </ion-text>
+            <ion-icon 
+              name="{{ isDegreeOpen ? 'chevron-up-outline' : 'chevron-down-outline' }}" 
+              class="school-icon"
+              (click)="toggleDegreee()">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+        
+        <!-- Form that toggles visibility -->
+        <form *ngIf="isDegreeOpen">
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Location</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Start Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+            <ion-col class="form-group">
+              <ion-label class="required">End Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
+  
+  
+      <div class="education-div" >
+        <ion-row size="12">
+          <ion-col size="12" style="height: 50px; border-radius: 8px;">
+            <img src="assets/icon/Vector (3).png" alt="" style="margin: 10px 5px 0px 19px; width: 20px; height: 14px;">
+            <ion-text class="school-sylabus-text">
+              Pg/M.Tech
+            </ion-text>
+            <ion-icon 
+              name="{{ isPgMTECH ? 'chevron-up-outline' : 'chevron-down-outline' }}" 
+              class="school-icon"
+              (click)="togglePgMtech()">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+        
+        <!-- Form that toggles visibility -->
+        <form *ngIf="isPgMTECH">
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">School Name</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Location</ion-label>
+              <ion-input class="form-control"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="form-group">
+              <ion-label class="required">Start Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+            <ion-col class="form-group">
+              <ion-label class="required">End Date</ion-label>
+              <ion-input class="form-control">
+                <ion-icon name="calendar-outline" slot="end" class="calendarIcon"></ion-icon>
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
+  
+  
+      <!-- Button Section -->
+      <ion-row>
+        <ion-col>
+          <ion-button class="about-me-button">
+            <ion-text class="about-me-button-text">
+              Pg/M.Tech
+            </ion-text>
+            <img src="assets/icon/Group 1000010326 (1).png" alt="">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
   

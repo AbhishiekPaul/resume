@@ -1,0 +1,76 @@
+
+.language-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 1px solid rgba(113, 189, 189, 0.44);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.07);
+    position: relative;   }
+  
+  .language-line h2 {
+    font-size: 15px;
+    position: relative;
+    right: 70px;
+    bottom: 5px;
+    text-align: center;
+  }
+  
+  .language-header-text {
+    background-color: white;
+    padding: 0 10px;
+    text-transform: capitalize;
+    color: var(--Blue, #053750);
+  }  
+  #start-text{
+    right: 3px;
+  }     
+:host {
+ 
+
+  .aboutOutMe-Button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   min-height: 32px;
+
+    border: 1px solid #71bdbd;
+    --box-shadow: none;
+    --background: none;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 0em;
+    --padding-end: 0em;
+    border-radius: 24px;
+   
+  }
+
+  .aboutOutMe-text {
+    color:  var(--Blue, #053750);
+text-align: center;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+margin: 10px;
+line-height: normal;
+text-transform: capitalize;
+  }
+
+  .button-image {
+    width: 16px; 
+    height: 16px; 
+    object-fit: contain;
+  }
+}
+.corner-img {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    width: 20px;
+    height: 18px;
+    margin: 5px;
+  }
